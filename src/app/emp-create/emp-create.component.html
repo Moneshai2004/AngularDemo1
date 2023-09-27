@@ -1,0 +1,58 @@
+<p>emp-create works!</p>
+<div class="container">
+  <div class="col align-self-center">
+    <form #myForm="ngForm">
+      <div class="form-group">
+        <label for="id" class="col-sm-2 col-form-label">Emp ID</label>
+        <input
+          type="text"
+          class="form-control"
+          name="id"
+          #id="ngModel"
+          [(ngModel)]="employees.id"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="ename" class="col-sm-2 col-form-label">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          name="ename"
+          pattern="[A-Za-z]{1,32}"
+          #ename="ngModel"
+          [(ngModel)]="employees.ename"
+          required
+        />
+      </div>
+      <span
+        *ngIf="ename.invalid && ename.touched"
+        class="error form-control-feedback"
+        >Enter valid Emp Name</span
+      >
+
+      <div class="form-group">
+        <label for="location" class="col-sm-2 col-form-label">Location</label>
+        <input
+          type="text"
+          class="form-control"
+          name="location"
+          #location="ngModel"
+          [(ngModel)]="employees.location"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <button
+          type="submit"
+          (click)="addEmp()"
+          [disabled]="!myForm.form.valid"
+          class="btn btn-primary"
+        >
+          Add Employee
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "ename": "sumanth",
+      "location": "Chennai"
+    },
+    {
+      "id": 2,
+      "ename": "navya",
+      "location": "Andhra"
+    },
+    {
+      "id": 3,
+      "ename": "Himaja",
+      "location": "Andhra"
+    },
+    {
+      "id": 4,
+      "ename": "yathesh",
+      "location": "Chennai"
+    },
+    {
+      "id": "5",
+      "ename": "analyst sriram",
+      "location": "buanagiri"
+    }
+  ]
+}
